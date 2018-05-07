@@ -53,7 +53,6 @@
 		</ul>
 	</section>
 
-
 	<section class="slide">
 		<h2>Lets start with JSX</h2>
 		<pre>
@@ -96,54 +95,51 @@
 		</pre>
 	</section>
 
-
 	<section class="slide">
 		<h2>Use any JS you want</h2>
 		<pre>
-				<code>&lt;MyComponent&gt;</code>
-				<code>  {HereMayByAnyJS}</code>
-				<code>  {'&lt;span&gt;or strings with html (will be escaped)&lt;/span&gt;'}</code>
-				<code>  or plain text</code>
-				<code>  or &lt;Component /&gt;</code>
-				<code>&lt;/MyComponent&gt;</code>
-			</pre>
+			<code>&lt;MyComponent&gt;</code>
+			<code>  {HereMayByAnyJS}</code>
+			<code>  {'&lt;span&gt;or strings with html (will be escaped)&lt;/span&gt;'}</code>
+			<code>  or plain text</code>
+			<code>  or &lt;Component /&gt;</code>
+			<code>&lt;/MyComponent&gt;</code>
+		</pre>
 	</section>
-
 
 	<section class="slide">
 		<h2>JSX is not HTML or plain-DOM</h2>
 		<code>console.log(&lt;div&gt;anything&lt;/div&gt;);</code>
 		<pre class="next">
-					<code>{</code>
-					<code>  "$$typeof": Symbol(react.element)</code>
-					<code>  _owner: Object { tag: 2, key: null, index: 0, … }</code>
-					<code>  key: null</code>
-					<code>  props: Object { children: […] }</code>
-					<code>  ref: null</code>
-					<code>  type: "div"</code>
-					<code>}</code>
+			<code>{</code>
+			<code>  "$$typeof": Symbol(react.element)</code>
+			<code>  _owner: Object { tag: 2, key: null, index: 0, … }</code>
+			<code>  key: null</code>
+			<code>  props: Object { children: […] }</code>
+			<code>  ref: null</code>
+			<code>  type: "div"</code>
+			<code>}</code>
 		</pre>
 	</section>
-
 
 	<section class="slide">
 		<h2>JSX is an JS-expression</h2>
 		<pre>
-				<code>function getGreeting(user) {</code>
-				<code>  if (user) {</code>
-				<code>    return &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;;</code>
-				<code>  }</code>
-				<code>  return &lt;h1&gt;Hello, Stranger.&lt;/h1&gt;;</code>
-				<code>}</code>
-			</pre>
+			<code>function getGreeting(user) {</code>
+			<code>  if (user) {</code>
+			<code>    return &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;;</code>
+			<code>  }</code>
+			<code>  return &lt;h1&gt;Hello, Stranger.&lt;/h1&gt;;</code>
+			<code>}</code>
+		</pre>
 	</section>
 
 	<section class="slide">
 		<h2>Simple functional component</h2>
 		<pre>
-			  <code>function MyComponent({ name = 'World' }) {</code>
-				<code>  return &lt;div&gt;Hello, {name}.&lt;/div&gt;;</code>
-				<code>}</code>
+			 <code>function MyComponent({ name = 'World' }) {</code>
+			<code>  return &lt;div&gt;Hello, {name}.&lt;/div&gt;;</code>
+			<code>}</code>
 		</pre>
 	</section>
 
@@ -170,14 +166,14 @@
 	<section class="slide">
 		<h2>Stateless component via classs</h2>
 		<pre>
-				  <code>class MyComponent extends React.Component {</code>
-					<code>  static defaultProps = { name: 'World' }</code>
-					<code>  render() {</code>
-					<code>    const { name } = this.props;</code>
-					<code>    return &lt;div&gt;Hello, {name}.&lt;/div&gt;;</code>
-					<code>  }</code>
-					<code>}</code>
-			</pre>
+			<code>class MyComponent extends React.Component {</code>
+			<code>  static defaultProps = { name: 'World' }</code>
+			<code>  render() {</code>
+			<code>    const { name } = this.props;</code>
+			<code>    return &lt;div&gt;Hello, {name}.&lt;/div&gt;;</code>
+			<code>  }</code>
+			<code>}</code>
+		</pre>
 	</section>
 
 	<section class="slide">
@@ -210,16 +206,16 @@
 	<section class="slide">
 		<h2>Access component's state</h2>
 		<pre>
-				  <code>class MyComponent extends React.Component {</code>
-					<code>  state = { updatedAt: new Date(), createdAt: new Date() }</code>
-					<code>  render() {</code>
-					<code>    const { updatedAt } = this.state;</code>
-					<code>    return &lt;div&gt;</code>
-					<code>      {createdAt.toString()}-{updatedAt.toString()}</code>
-					<code>    &lt;/div&gt;;</code>
-					<code>  }</code>
-					<code>}</code>
-			</pre>
+			<code>class MyComponent extends React.Component {</code>
+			<code>  state = { updatedAt: new Date(), createdAt: new Date() }</code>
+			<code>  render() {</code>
+			<code>    const { updatedAt } = this.state;</code>
+			<code>    return &lt;div&gt;</code>
+			<code>      {createdAt.toString()}-{updatedAt.toString()}</code>
+			<code>    &lt;/div&gt;;</code>
+			<code>  }</code>
+			<code>}</code>
+		</pre>
 	</section>
 
 	<section class="slide">
